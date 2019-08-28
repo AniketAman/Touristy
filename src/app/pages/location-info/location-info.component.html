@@ -1,0 +1,18 @@
+<!-- <div class="centralized"> -->
+<h1 style="padding-left: 5px">Nearby</h1>
+<mat-list>
+  <h3 mat-subheader>Wikipedia</h3>
+  <mat-list-item *ngFor="let l of list?.query?.geosearch">
+    <mat-icon mat-list-icon>near_me</mat-icon>
+    <h4 mat-line>{{ l.title }}</h4>
+    <!-- <p mat-line> {{folder.updated | date}} </p> -->
+  </mat-list-item>
+</mat-list>
+<!-- <ul>
+    <li *ngFor="let l of list?.query?.geosearch">
+      <a target="_blank" href="http://en.wikipedia.org/?curid={{ l.pageid }}">{{
+        l.title
+      }}</a>
+    </li>
+  </ul> -->
+<!-- </div> -->

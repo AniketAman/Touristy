@@ -6,13 +6,19 @@ import { AppComponent } from "./app.component";
 import { ServiceWorkerModule } from "@angular/service-worker";
 import { environment } from "../environments/environment";
 import { MyOwnCustomMaterialModule } from "./mat/mat.module";
+import { LandingComponent } from "./pages/landing/landing.component";
+import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
+import { LocationInfoComponent } from './pages/location-info/location-info.component';
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, LandingComponent, LocationInfoComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MyOwnCustomMaterialModule,
+    HttpClientModule,
+    FormsModule,
     ServiceWorkerModule.register("ngsw-worker.js", {
       enabled: environment.production
     })

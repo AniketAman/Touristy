@@ -1,0 +1,37 @@
+<mat-grid-list cols="4" rowHeight="100px">
+  <mat-grid-tile [colspan]="4" [rowspan]="1">
+    <div class="box-container">
+      <h1>
+        Welcome to Touristy!
+      </h1>
+      <h4 class="text-center">
+        Lets explore the place.
+      </h4>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+<mat-divider></mat-divider>
+<div class="centralized">
+  <form class="example-form" (submit)="submitingArea($event)">
+    <mat-form-field class="example-full-width">
+      <input
+        matInput
+        placeholder="Location"
+        name="location"
+        [(ngModel)]="place"
+      />
+    </mat-form-field>
+    <button class="full-width" mat-flat-button color="primary">
+      Find
+      <mat-icon>where_to_vote</mat-icon>
+    </button>
+  </form>
+  <div
+    (click)="selectLocation()"
+    matRipple
+    class="address-box mat-elevation-z2"
+    *ngIf="locationObject?.display_name"
+  >
+    {{ locationObject?.display_name }}
+  </div>
+</div>

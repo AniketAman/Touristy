@@ -1,5 +1,40 @@
 @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 /* You can add global styles to this file, and also import other style files */
+html,
 body {
   margin: 0;
+  font-family: "Lato", sans-serif;
+  height: 100%;
+  // overflow: hidden;
+}
+
+.box-container {
+  padding: 5px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.centralized {
+  padding: 5px;
+  display: flex;
+  width: 97%;
+  height: 80%;
+  align-items: center;
+  flex-direction: column;
+}
+
+.full-width {
+  width: 100%;
+}
+.mat-toolbar.mat-primary {
+  background: white;
+  color: black;
+  border-bottom: 1px solid #ddd;
+  position: fixed;
+  top: 0;
+  margin-bottom: 5%;
+  z-index: 1;
 }
